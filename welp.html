@@ -1,0 +1,55 @@
+<!-- Write code below 💖 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welp! - A Media Review Website</title>
+</head>
+
+<body>
+
+  <form>
+    <h2>User Reviews</h2>
+
+    <!--User Details-->
+    Username:* <input type="text" required/> <br>
+    Email:* <input type="email"required/> <br>
+    <br><br>
+
+    <!--Media Name-->
+    Book/Film Name title:* <input type="text" required> <br><br>
+
+    <!--Book, Movie or Series?-->
+    <label for="book-movie-series-other" required>Form of media:*</label><br>
+    <input type="checkbox" id="book-movie-series-other"/>Book<br>
+    <input type="checkbox" id="book-movie-series-other"/>Movie<br>
+    <input type="checkbox" id="book-movie-series-other"/>Series<br>
+    <input type="checkbox" id="book-movie-series-other"/>Other<br>
+    <br>
+
+    <!--User's opinion-->
+    <label for="read-watch-input">Would you read/watch this again?</label><br>
+    <input type="radio" id="read-watch-input" name="option">Absolutely!<br>
+    <input type="radio" id="read-watch-input" name="option">Yes<br>
+    <input type="radio" id="read-watch-input" name="option">Probably<br>
+    <input type="radio" id="read-watch-input" name="option">I don't think so...<br>
+    <input type="radio" id="read-watch-input" name="option">NO!<br><br>
+
+    <!--User's Rating (scale of 1-5)-->
+    <label for="rating-input" required>Rating (1-Lowest, 5 Highest):*</label><br>
+    <input type="number" min="1" max="5">
+    <br><br>
+
+    <!--Comments text box-->
+    <label for="comments-input">Comments:</label>
+    <textarea type="text" rows="5" cols="50" minlength="1" maxlength="300" placeholder="Type here..."></textarea>
+
+    <!--Submit button-->
+    <input type="submit" value="Submit Review"/>
+
+  </form>
+
+</body>
+
+
+</html>
