@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <!--Webpage tab title-->
+    <head>
+        <title>Wanmin Restaurant</title>
+
+        <!--Styles section-->
+        <style>
+
+            #food-pictures {
+                width: 150px;
+            }
+
+            #price {
+                font-style:italic;
+            }
+
+            #order-instructions {
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+
+    <!--Body section-->
+    <body>
+
+        <!--Header section-->
+        <header>
+            <h1>Wanmin Restaurant</h1>
+            <h3>Try something new at the Wanmin Restaurant!</h3>
+            <nav>
+                <ul>
+                    <li><a href="#menu-section">Menu Section</a></li>
+                    <li><a href="#order-section">Place your order</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br/><hr/><br/>
+
+        <!--Main section-->
+        <main>
+            <!--Menu section-->
+            <section id="menu-section">
+                <h2>Menu</h2>
+
+                <!--Jueyun Chili Chicken-->
+                <img id="food-pictures" alt="Jueyun Chili Chicken" src="https://static.wikia.nocookie.net/gensin-impact/images/7/72/Item_Jueyun_Chili_Chicken.png/revision/latest?cb=20210415134823"/>
+                <h3>Jueyun Chili Chicken</h3>
+                <p>
+                    Chicken in a dressing, served cold. The way this dish has been prepared captures the succulence of the chicken perfectly. 
+                    Beneath the glowing gold skin, the meat has a mildly hot flavor.
+                    <br/>
+                    <b>Price:</b> <span id="price">1,925 Mora</span>
+                </p>
+
+
+                <!--Minty Meat Rolls-->
+                <img id="food-pictures" alt="Minty Meat Rolls" src="https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Minty_Meat_Rolls.png/revision/latest?cb=20210317031656"/>
+                <h3>Minty Meat Rolls</h3>
+                <p>
+                    A sour-and-spicy dish. The marinated meat has been thinly sliced and rolled into the mint leaves, before being brushed with a 
+                    sauce blend containing Jueyun Chilis. The unique mint flavor adds the finishing touch to this dish, turning it into an excellent 
+                    addition to any cold platter.
+                    <br/>
+                    <b>Price:</b> <span id="price">5,000 Mora</span>
+                </p>
+
+
+                <!--Triple-Layered Consommé-->
+                <img id="food-pictures" alt="Triple-Layered Consommé" src="https://static.wikia.nocookie.net/gensin-impact/images/b/be/Item_Triple-Layered_Consomm%C3%A9.png/revision/latest?cb=20210415145658"/>
+                <h3>Triple-Layered Consommé</h3>
+                <p>
+                    A neatly arranged dish. The ham, fowl, and bamboo shoots have been sliced into threads of equal length, and they've been laid out neatly in the soup bowl 
+                    after being steamed at high heat, before being covered in consommé. The layers are distinct, and the mouthfeel is salty yet fresh.
+                    <br/>
+                    <b>Price:</b> <span id="price">5,000 Mora</span>
+                </p>
+            </section>
+            <br/><hr/><br/>
+
+
+
+
+            <!--Place your order section-->
+            <section id="order-section">
+                <form>
+                    <h2>Place your order</h2>
+
+                    <!--Number inputs for each menu item-->
+                    <label for="menu-item-selection" id="order-instructions">Select a menu item:</label><br/>
+                    Jueyun Chili Chicken: <input type="number" id="menu-item-selection" min="0" max="5"/><br/>
+                    Minty Meat Balls: <input type="number" id="menu-item-selection" min="0" max="10"/><br/>
+                    Triple-Layered Consommé: <input type="number" id="menu-item-selection" min="0" max="10"/><br/><br/>
+
+                    <!--Radio inputs for sides/add-ons-->
+                    <label for="sides-add-ons" id="order-instructions">Any sides/add-ons?</label><br/>
+                    <input type="radio" id="sides-add-ons"/>Teyvat Fried Egg <br/>
+                    <input type="radio" id="sides-add-ons"/>Fisherman's Toast <br/>
+                    <input type="radio" id="sides-add-ons"/>Chicken-Mushroom Skewer <br/>
+                    <input type="radio" id="sides-add-ons"/>Crab <br/>
+                    <input type="radio" id="sides-add-ons"/>None <br/><br/>
+
+                    <!--Textarea element for special requests-->
+                    <label for="special-requests" id="order-instructions">Any special requests? (allergies, handling etc.)</label><br/>
+                    <textarea id="special-requests" maxlength="200" placeholder="Special requests..."></textarea>
+
+                    <!--Submit input button-->
+                    <label for="submit-input-button"></label><br/><br/>
+                    <input id="submit-input-button" type="submit" value="Go To Checkout"/>
+
+
+                </form>
+            </section>
+
+
+        </main>
+        <br/><hr/><br/>
+
+        <!--Footer section-->
+        <footer>
+            <p>Made with 💖 by @oliviakamau :3</p>
+        </footer>
+
+    </body>
+
+</html>
