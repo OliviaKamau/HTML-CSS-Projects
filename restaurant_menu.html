@@ -3,9 +3,41 @@
     <!--Webpage tab title-->
     <head>
         <title>Wanmin Restaurant</title>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 
         <!--Styles section-->
         <style>
+
+            header {
+                font-family: 'Quicksand', sans-serif;
+                background-color: #A9846A;
+                display: block;
+                padding: 20px;
+                text-align: center;
+            }
+
+            body {
+                background-color: #E0CDA9;
+                font-family: 'Quicksand', sans-serif;
+            }
+
+            #menu-section {
+                background-color: #C19A6B;
+                display: block;
+                padding: 20px;
+            }
+
+            #order-section {
+                background-color: #B98663;
+                display: block;
+                padding: 20px;
+            }
+
+
+            .food-columns{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
 
             #food-pictures {
                 width: 150px;
@@ -15,7 +47,15 @@
                 font-style:italic;
             }
 
-            #order-instructions {
+            #order-instructions-1 {
+                font-weight: bold;
+            }
+
+            #order-instructions-2 {
+                font-weight: bold;
+            }
+
+            #order-instructions-3 {
                 font-weight: bold;
             }
 
@@ -27,14 +67,14 @@
 
         <!--Header section-->
         <header>
-            <h1>Wanmin Restaurant</h1>
-            <h3>Try something new at the Wanmin Restaurant!</h3>
-            <nav>
-                <ul>
-                    <li><a href="#menu-section">Menu Section</a></li>
-                    <li><a href="#order-section">Place your order</a></li>
-                </ul>
-            </nav>
+                <h1>Wanmin Restaurant</h1>
+                <h3>Try something new at the Wanmin Restaurant!</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#menu-section">Menu Section</a></li>
+                        <li><a href="#order-section">Place your order</a></li>
+                    </ul>
+                </nav>
         </header>
         <br/><hr/><br/>
 
@@ -44,6 +84,11 @@
             <section id="menu-section">
                 <h2>Menu</h2>
 
+
+                <!--Columns for each menu item-->
+                <div class="food-columns">
+
+                
                 <!--Jueyun Chili Chicken-->
                 <img id="food-pictures" alt="Jueyun Chili Chicken" src="https://static.wikia.nocookie.net/gensin-impact/images/7/72/Item_Jueyun_Chili_Chicken.png/revision/latest?cb=20210415134823"/>
                 <h3>Jueyun Chili Chicken</h3>
@@ -76,6 +121,10 @@
                     <br/>
                     <b>Price:</b> <span id="price">5,000 Mora</span>
                 </p>
+
+
+                </div>
+
             </section>
             <br/><hr/><br/>
 
@@ -88,25 +137,25 @@
                     <h2>Place your order</h2>
 
                     <!--Number inputs for each menu item-->
-                    <label for="menu-item-selection" id="order-instructions">Select a menu item:</label><br/>
-                    Jueyun Chili Chicken: <input type="number" id="menu-item-selection" min="0" max="5"/><br/>
-                    Minty Meat Balls: <input type="number" id="menu-item-selection" min="0" max="10"/><br/>
-                    Triple-Layered Consommé: <input type="number" id="menu-item-selection" min="0" max="10"/><br/><br/>
+                    <label id="order-instructions-1">1. Select a menu item:</label><br/>
+                    Jueyun Chili Chicken: <input type="number" id="jueyun-chili-chicken" min="1" max="5"/><br/>
+                    Minty Meat Balls: <input type="number" id="minty-meat-balls" min="1" max="10"/><br/>
+                    Triple-Layered Consommé: <input type="number" id="triple-layered-consomme" min="1" max="10"/><br/><br/>
 
                     <!--Radio inputs for sides/add-ons-->
-                    <label for="sides-add-ons" id="order-instructions">Any sides/add-ons?</label><br/>
-                    <input type="radio" id="sides-add-ons"/>Teyvat Fried Egg <br/>
-                    <input type="radio" id="sides-add-ons"/>Fisherman's Toast <br/>
-                    <input type="radio" id="sides-add-ons"/>Chicken-Mushroom Skewer <br/>
-                    <input type="radio" id="sides-add-ons"/>Crab <br/>
-                    <input type="radio" id="sides-add-ons"/>None <br/><br/>
+                    <label id="order-instructions-2">2. Any sides/add-ons?</label><br/>
+                    <input type="checkbox" id="teyvat-fried-egg"/>Teyvat Fried Egg <br/>
+                    <input type="checkbox" id="fishermans-toast"/>Fisherman's Toast <br/>
+                    <input type="checkbox" id="chicken-mushroom-skewer"/>Chicken-Mushroom Skewer <br/>
+                    <input type="checkbox" id="crab"/>Crab <br/>
+                    <input type="checkbox" id="none"/>None <br/><br/>
 
                     <!--Textarea element for special requests-->
-                    <label for="special-requests" id="order-instructions">Any special requests? (allergies, handling etc.)</label><br/>
+                    <label for="special-requests" id="order-instructions-3">3. Any special requests? (allergies, handling etc.)</label><br/>
                     <textarea id="special-requests" maxlength="200" placeholder="Special requests..."></textarea>
 
                     <!--Submit input button-->
-                    <label for="submit-input-button"></label><br/><br/>
+                    <br/><br/>
                     <input id="submit-input-button" type="submit" value="Go To Checkout"/>
 
 
